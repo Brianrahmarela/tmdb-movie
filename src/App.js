@@ -16,7 +16,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route exact path="/" element={<Home />}></Route>
-				<Route path="/:title" element={<MovieDetail />}></Route>
+				<Route path="/detail" element={<MovieDetail />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);

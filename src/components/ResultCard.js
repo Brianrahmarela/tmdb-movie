@@ -12,7 +12,7 @@ function ResultCard({movie}) {
     console.log(e.target)
     dispatch(getDetailMovies(movie.id));
     dispatch(getDetailMovies(movie.id));
-    navigate("/:title");
+    navigate("/detail");
   }
   return (
     <div className="result-card bg-white card-movie p-2" onClick={handleDetail}>
