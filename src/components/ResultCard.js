@@ -1,8 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router";
+import { getDetailMovies } from "../redux/actions/movieDetail.actions";
+import { useDispatch } from "react-redux";
+
 
 function ResultCard({movie}) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+    
+  const handleDetail = (e) => {
+    console.log(e.target)
+    dispatch(getDetailMovies(movie.id));
+    dispatch(getDetailMovies(movie.id));
+    navigate("/:title");
+  }
   return (
-    <div className="result-card bg-white card-movie p-2">
+    <div className="result-card bg-white card-movie p-2" onClick={handleDetail}>
       <div className="poster-wrapper">
         {movie.poster_path ? (
           <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={`${movie.title} Poster`}/>

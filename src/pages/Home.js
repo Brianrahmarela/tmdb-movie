@@ -40,7 +40,6 @@ function Home() {
           <div className="grid grid-flow-row auto-cols-max grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 justify-center">
 						{ListMovie.map((movie, idx) => (
 							<div key={idx} className="justify-center flex">
-                
 								<ResultCard movie={movie} />
 							</div>
 						))}

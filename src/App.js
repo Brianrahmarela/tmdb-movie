@@ -7,7 +7,7 @@ import {
 
 //Pages
 import Home from "../src/pages/Home";
-import Detail from "../src/pages/Detail";
+import MovieDetail from "../src/pages/MovieDetail";
 import Header from "../src/components/Header";
 
 function App() {
@@ -16,8 +16,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route exact path="/" element={<Home />}></Route>
-				<Route exact path="/detail" element={<Detail />}></Route>
-				{/* <Route path="/login" element={<Login />} />       */}
+				<Route path="/:title" element={<MovieDetail />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
