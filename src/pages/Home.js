@@ -5,14 +5,12 @@ import Layout from "../components/layout";
 
 import { useSelector, useDispatch } from "react-redux";
 import { emptyMovie, getMovieList } from "../redux/actions/movieList.actions";
-// const axios = require('axios');
 
 function Home() {
 	const dispatch = useDispatch();
 	const { movies, loading } = useSelector((state) => state.moviesReducers);
 	console.log("HASIL API REDUCER", movies);
 	const [titleMovie, setTitleMovie] = useState("");
-	const [pagePerTitle, setPagePerTitle] = useState(1);
 
 	console.log(titleMovie);
 	useEffect(() => {
@@ -52,7 +50,7 @@ function Home() {
 								<ResultCard movie={movie} />
 							</div>
 						))}
-						              {loading && <h2>loading...</h2>}
+						{loading && <h2>loading...</h2>}
 
           </div>
 				)}
