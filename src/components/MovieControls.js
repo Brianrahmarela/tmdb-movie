@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEyeSlash, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 export const MovieControls = ({ type, movie }) => {
   const {
@@ -10,18 +12,18 @@ export const MovieControls = ({ type, movie }) => {
   } = useContext(GlobalContext);
 
   return (
-    <div className="inner-card-controls">
+    <div className="inner-card-controls mt-2">
       {type === "watchlist" && (
         <>
-          <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-            <i className="fa-fw far fa-eye"></i>
-          </button>
+          <button className="ctrl-btn mr-2" onClick={() => addMovieToWatched(movie)}>
+            <FontAwesomeIcon icon={faEyeSlash} size="lg"></FontAwesomeIcon>
 
+          </button>
           <button
-            className="ctrl-btn"
+            className="ctrl-btn "
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-            <i className="fa-fw fa fa-times"></i>
+           <FontAwesomeIcon icon={faTimes} size="lg"></FontAwesomeIcon>
           </button>
         </>
       )}
@@ -29,14 +31,14 @@ export const MovieControls = ({ type, movie }) => {
       {type === "watched" && (
         <>
           <button className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
-            <i className="fa-fw far fa-eye-slash"></i>
+            <FontAwesomeIcon icon={faEyeSlash} size="lg"></FontAwesomeIcon>
           </button>
 
           <button
-            className="ctrl-btn"
+            className="ctrl-btn "
             onClick={() => removeFromWatched(movie.id)}
           >
-            <i className="fa-fw fa fa-times"></i>
+           <FontAwesomeIcon icon={faTimes} size="lg"></FontAwesomeIcon>
           </button>
         </>
       )}

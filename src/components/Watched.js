@@ -6,19 +6,17 @@ import ResultCard from "./ResultCard";
   const { watched } = useContext(GlobalContext);
 
   return (
-    <div className="movie-page">
-      <div className="container">
-        <div className="header">
-          <h1 className="heading">Watched Movies</h1>
+		<div className="flex justify-center">
+      <div>
+				<h1 className="flex font-bold text-2xl justify-center pt-20">Watched Movies</h1>
 
-          <span className="count-pill">
+          <span className="flex font-bold text-2xl justify-center count-pill">
             {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
           </span>
-        </div>
 
         {watched.length > 0 ? (
-          <div className="movie-grid">
-            {watched.map((movie) => (
+					<div className="grid grid-flow-row auto-cols-max grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 justify-center">
+          {watched.map((movie) => (
               <ResultCard movie={movie} key={movie.id} type="watched" />
             ))}
           </div>

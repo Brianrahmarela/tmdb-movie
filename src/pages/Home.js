@@ -41,7 +41,7 @@ function Home() {
 					placeholder="search movie"
 					value={titleMovie}
 					onChange={handleChange}
-					className="border border-green-400 rounded-xl w-full py-2 px-4 focus:outline-none text-green-500"
+					className="border border-green rounded-xl w-full py-2 px-4 focus:outline-none text-green-500"
 				/>
 				{movies.length > 0 && (
           <div className="grid grid-flow-row auto-cols-max grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-10 justify-center">

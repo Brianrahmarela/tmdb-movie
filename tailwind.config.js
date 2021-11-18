@@ -3,23 +3,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     
-      'xs': '320px',
-      // => @media (min-width: 320px) { ... }
-
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+    backgroundColor: theme => ({
+      'base': '#5547b6',
+      'secondary': '#f9f9f9',
+      'disabled': '#d8d8d8',
+      'third': "#e6e3f5",
+      'green': '#15a192'
+    }),
+    borderColor: {
+      'green': '#15a192',
+    },
     extend: {},
   },
   variants: {
